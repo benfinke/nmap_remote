@@ -40,3 +40,8 @@ checkin_pass = "password"
 
 nmap_path = "/usr/local/bin/nmap"
 
+working_dir = "./"
+
+# Database options
+
+database_type = "sqlite"

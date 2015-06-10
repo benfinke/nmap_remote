@@ -18,5 +18,15 @@ import nmap
 import config
 
 
+
+def usage(name):
+    print "usage: %s [options]"
+
 scanner = nmap.PortScanner()
+
+for target in config.scan_targets:
+    scanner.scan(hosts=target, arguments=config.scan_type+' '+config.scan_output+' '+config.scan_output_prefix)
+    scan_output = scanner.get_nmap_last_output()
+    print scan_output
+
 
